@@ -16,13 +16,13 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                checkout scm
+                checkout scm // scm is sorce code management
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm ci'
+                sh 'npm ci' // to install dependencies in plugin we install from package-lock.json file, for this npm ci is used
             }
         }
 
@@ -121,7 +121,7 @@ pipeline {
             }
         }
 
-        stage('Smoke Test') {
+        stage('Smoke Test') { // smoke test, is used test basic end points
 
             when {
                 branch 'master'
