@@ -11,6 +11,10 @@
     "test:ci": "jest --ci --coverage --reporters=default --reporters=jest-junit",
     "build": "rimraf dist && esbuild src/server.js --bundle --platform=node --packages=external --outfile=dist/server.js"
   },
+  "jest-junit": {
+    "outputDirectory": "reports/junit",
+    "outputName": "junit.xml"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
