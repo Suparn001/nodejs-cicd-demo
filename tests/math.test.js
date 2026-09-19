@@ -30,6 +30,6 @@ describe("Math utilities", () => {
   });
 
   test("divide two numbers", () => {
-    expect(multiply(10, 2)).toBe(5);
+    expect(divide(10, 2)).toBe(5);
   });
 });
